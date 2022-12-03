@@ -2,13 +2,19 @@
 Проект выполнен в строгом соответствии с внутренними правилами Школы 21 и сабджектом. Целью проекта является знакомство с пайпами для передачи информации между процессами.
 
 Аругменты программы:
-- file1 cmd1 cmd2 file2
+```
+file1 cmd1 cmd2 file2
+```
 - file1 и file2 имена файлов
-- cmd1 и cmd2 команды оболочки с их параметрами и опциями
+- cmd1 и cmd2 команды с их параметрами и опциями
 
 При вызове программа должна вести себя как следующая команда оболчки:
-- < file1 cmd1 | cmd2 > file2
+```
+< file1 cmd1 | cmd2 > file2
+```
 
 Примеры:
-- ./pipex infile "ls -l" "wc -l" outfile должна вести себя как  < infile ls -l | wc -l > outfile
-- ./pipex infile "grep a1" "wc -w" outfile должна вести себя как < infile grep a1 | wc -w > outfile
+```
+./pipex infile "ls -l" "wc -l" outfile должна вести себя как  < infile ls -l | wc -l > outfile
+./pipex infile "grep a1" "wc -w" outfile должна вести себя как < infile grep a1 | wc -w > outfile
+```
